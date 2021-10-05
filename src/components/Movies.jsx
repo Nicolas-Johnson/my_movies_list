@@ -1,0 +1,1 @@
+//will display the filtered data from datausing the MovieCard componente.

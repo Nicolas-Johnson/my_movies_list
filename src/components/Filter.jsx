@@ -1,0 +1,1 @@
+//Will filer the data and create a new array of objects to put on Content state to be show on movies component.
