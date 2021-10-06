@@ -8,12 +8,12 @@ class Movies extends React.Component{
 
     this.state = {
         loading: false,
-        movies: [],
     }
   }
 
   render() {
-    const { movies, loading } = this.state;
+    const { loading } = this.state;
+    const { movies } = this.props;
     return(
       <div>
         <h1>Movies</h1>

@@ -84,7 +84,7 @@ const movies = [
       }],
       comedy: [],
       romance: [],
-      new_Releases: [],
+      new_releases: [],
       
     }
   ];

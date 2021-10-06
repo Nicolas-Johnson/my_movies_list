@@ -1,6 +1,5 @@
 //Will filer the data and create a new array of objects to put on Content state to be show on movies component.
 import React from 'react';
-import movies from '../data';
 
 class Filter extends React.Component{
   constructor() {
@@ -9,8 +8,9 @@ class Filter extends React.Component{
     this.state = {
       searchByText: '',
       favoritesOnly: false,
-      searchByGenre: 'All',
+      searchByGenre: 'all',
       filteredMovies: [],
+      movies: [],
     }
   }
 
@@ -24,17 +24,19 @@ class Filter extends React.Component{
 
   handleFilter = () => {
     const { searchByText, favoritesOnly, searchByGenre } = this.state;
+    const { movies, handleFilterMovies } = this.props;
     const genre = movies[0][searchByGenre];
     const filter = genre.filter((movie) => movie.title.includes(searchByText) || movie.subtitle.includes(searchByText) || movie.storyline.includes(searchByText));
     if(favoritesOnly){
       const onlyFavs = filter.filter((movie) => movie.favorite === true);
-      return this.setState({filteredMovies: onlyFavs});
+      return handleFilterMovies(onlyFavs);
     }
-    this.setState({filteredMovies: filter});
+    handleFilterMovies(filter);
+
   }
 
   render() {
-    const { filteredMovies, searchByGenre } = this.state;
+    const { searchByGenre } = this.state;
     return(
       <div>
         <form>
@@ -53,12 +55,11 @@ class Filter extends React.Component{
               <option value="action" >Action</option>
               <option value="comedy" >Comedy</option>
               <option value="romance" >Romance</option>
-              <option value="new_releases">New_Releases</option>
+              <option value="new_releases">New Releases</option>
             </select>
           </label>
         </form>
         <button type="button" onClick={ this.handleFilter }>Search</button>
-        {filteredMovies && filteredMovies.map((movie, index) => <div key={index}>{ movie.title }</div>)}
       </div>
     );
   }
