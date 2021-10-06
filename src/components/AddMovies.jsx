@@ -1,4 +1,3 @@
-//Will create a new movie object to push on data.
 import React from 'react';
 
 class AddMovies extends React.Component{

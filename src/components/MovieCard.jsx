@@ -1,4 +1,3 @@
-//Will create a card for each movie to be shown on Movies Componente.
 import React from "react";
 
 class MovieCard extends React.Component{

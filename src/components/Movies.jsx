@@ -1,4 +1,3 @@
-//will display the filtered data from datausing the MovieCard componente.
 import React from "react";
 import MovieCard from "./MovieCard";
 

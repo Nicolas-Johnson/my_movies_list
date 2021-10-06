@@ -1,4 +1,3 @@
-// Will wrap all the components and the state needed in this project.
 import React from 'react';
 import Filter from './Filter';
 import AddMovies from './AddMovies';
