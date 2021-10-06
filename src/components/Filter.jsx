@@ -34,7 +34,7 @@ class Filter extends React.Component{
   }
 
   render() {
-    const { filteredMovies } = this.state;
+    const { filteredMovies, searchByGenre } = this.state;
     return(
       <div>
         <form>
@@ -48,8 +48,8 @@ class Filter extends React.Component{
           </label>
           <label htmlFor="searchByGenre">
             Genre:
-            <select name="searchByGenre" onChange={ this.handleChange }>
-              <option selected value="all">All</option>
+            <select name="searchByGenre" value={ searchByGenre } onChange={ this.handleChange }>
+              <option value="all">All</option>
               <option value="action" >Action</option>
               <option value="comedy" >Comedy</option>
               <option value="romance" >Romance</option>

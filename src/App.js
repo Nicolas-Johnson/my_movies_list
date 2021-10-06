@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Filter from './components/Filter';
-import Content from './components/Content';
+//import Content from './components/Content';
 import AddMovies from './components/AddMovies';
 
 class App extends React.Component{
