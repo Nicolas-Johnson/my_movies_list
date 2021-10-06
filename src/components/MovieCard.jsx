@@ -11,7 +11,7 @@ class MovieCard extends React.Component{
         <h2>{ subtitle }</h2>
         <p>{ storyline }</p>
         <div>
-          {favorite && <span role="star-icon" aria-label="Star Favorit">&#9733;</span>}
+          {favorite && <span aria-label="Star Favorit">&#9733;</span>}
           <h3>{ rating }</h3>
         </div>
       </div>
