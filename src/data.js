@@ -1,7 +1,7 @@
 //i will store all the movies here to simulate a DataBase.
 const movies = [
     {
-      All: [{
+      all: [{
         title: 'Kingsglaive',
         subtitle: 'Final Fantasy XV',
         storyline: 'King Regis, who oversees the land of Lucis, commands his army of soldiers to protect the kingdom from the Niflheim empire\'s plans to steal the sacred crystal.',
@@ -41,7 +41,7 @@ const movies = [
         imagePath: 'images/Resident_Evil_Vendetta.jpg',
         favorite: false,
       }],
-      Action: [
+      action: [
       {
         title: 'Kingsglaive',
         subtitle: 'Final Fantasy XV',
@@ -82,9 +82,9 @@ const movies = [
         imagePath: 'images/Resident_Evil_Vendetta.jpg',
         favorite: false,
       }],
-      Comedy: [],
-      Romance: [],
-      New_Releases: [],
+      comedy: [],
+      romance: [],
+      new_Releases: [],
       
     }
   ];
