@@ -49,11 +49,11 @@ class Filter extends React.Component{
           <label htmlFor="searchByGenre">
             Genre:
             <select name="searchByGenre" onChange={ this.handleChange }>
-              <option>All</option>
-              <option>Action</option>
-              <option>Comedy</option>
-              <option>Romance</option>
-              <option>New_Releases</option>
+              <option selected value="all">All</option>
+              <option value="action" >Action</option>
+              <option value="comedy" >Comedy</option>
+              <option value="romance" >Romance</option>
+              <option value="new_releases">New_Releases</option>
             </select>
           </label>
         </form>
