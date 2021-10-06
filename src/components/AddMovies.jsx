@@ -1,6 +1,5 @@
 //Will create a new movie object to push on data.
 import React from 'react';
-import movies from '../data';
 
 class AddMovies extends React.Component{
   constructor() {
@@ -25,6 +24,7 @@ class AddMovies extends React.Component{
   }
   handleAddMovie = () => {
     const { title, subtitle, storyline, rating, imagePath, favorite, genre } = this.state;
+    const { handleAddMovieToList } = this.props;
     const newMovie = {
         title,
         subtitle,
@@ -33,12 +33,13 @@ class AddMovies extends React.Component{
         imagePath,
         favorite,
     }
+    handleAddMovieToList(newMovie, genre);
     //const newMovies = movies;
-    console.log('NewMovie:', newMovie);
-    console.log('OldMovies:', movies[0][genre]);
-    movies[0][genre].push(newMovie);
-    movies[0]['all'].push(newMovie);
-    console.log('Movies With the new one:', movies[0]);
+    //console.log('NewMovie:', newMovie);
+    //console.log('OldMovies:', movies[0][genre]);
+    //movies[0][genre].push(newMovie);
+    //movies[0]['all'].push(newMovie);
+    //console.log('Movies With the new one:', movies[0]);
   }
 
   render() {
